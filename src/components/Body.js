@@ -5,7 +5,7 @@ import useShowsDetails from "../utils/useShowsDetails";
 
 const Body = () => {
   const showList = useShowsDetails();
-  console.log(showList);
+  // console.log(showList);
 
   return showList.length === 0 ? (
     <></>

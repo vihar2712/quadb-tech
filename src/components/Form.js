@@ -1,11 +1,9 @@
 import { useState } from "react";
 
 const Form = ({ showInfo, closeForm }) => {
-  const { name, summary, image, runtime, rating, language, genres, type } =
-    showInfo.show;
+  const { name } = showInfo.show;
   const [username, setUserName] = useState(localStorage.getItem("username"));
   const [showUserName, setShowUserName] = useState(localStorage.getItem(name));
-  console.log(showUserName, username);
 
   const storeData = () => {
     localStorage.setItem(name, true);
