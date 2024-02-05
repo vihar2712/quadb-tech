@@ -6,8 +6,8 @@ const Form = ({ showInfo, closeForm }) => {
   const [showUserName, setShowUserName] = useState(localStorage.getItem(name));
 
   const storeData = () => {
-    localStorage.setItem(name, true);
-    setUserName(localStorage.getItem("username"));
+    username && localStorage.setItem(name, true); // to check if user exists then only show ticket will be booked
+    setUserName(localStorage.getItem("username")); 
     setShowUserName(localStorage.getItem(name));
   };
   const formClose = () => {
